@@ -1,0 +1,113 @@
+@media (max-width: 450px) {
+    .header {
+        padding-top: 24px;
+        padding-bottom: 24px;
+    
+        &__nav {
+            gap: 16px;
+    
+            &-theme {
+                padding-left: 16px;
+                gap: 12px;
+            }
+        }
+    }
+
+    .select {
+        font-size: 14px;
+        line-height: 171%;
+    }
+
+    .search {
+        margin-bottom: 24px;
+        
+        input {
+            padding: 14px 24px;
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        button {
+            top: 14px;
+        }
+
+        .error-text {
+            font-size: 18px;
+        }
+    }
+
+    .about {
+    
+        &__header {
+            padding-bottom: 32px;
+    
+            h1 {
+                font-size: 32px;
+            }
+    
+            &-transcription {
+                font-size: 18px;
+                line-height: 133%;
+            }
+    
+            &-btn-play {
+                width: 48px;
+                height: 48px;
+                background-size: cover;
+            }
+        }
+    
+        &__part-of-speech {
+            margin-bottom: 33px;
+    
+            &_type {
+                font-size: 18px;
+                margin-bottom: 31px;
+            }
+    
+            &_meaning {
+                font-size: 16px;
+                padding-bottom: 17px;
+            }
+    
+            ul {
+                margin-bottom: 24px;
+    
+                li {
+                    font-size: 15px;
+                    line-height: 160%;
+                    padding-left: 25px;
+                }
+    
+                li::before {
+                    margin-left: 0px;
+                }
+            }
+    
+            &_synonyms {
+                margin-top: 0px;
+                font-size: 16px;
+                padding-bottom: 32px;
+            }
+    
+            &_example {
+                font-size: 15px;
+                line-height: 160%;
+                padding-left: 25px;
+                margin-bottom: 32px;
+            }
+        }
+    
+        &__source {
+            padding-top: 24px;
+            flex-wrap: wrap;
+            row-gap: 8px;
+            padding-bottom: 85px;
+        }
+    }
+    
+    .line {
+        display: flex;
+        gap: 16px;
+    }
+}

@@ -1,0 +1,149 @@
+$font-family-sans:"Inter", sans-serif;
+
+$font-family-serif: "Lora", serif;
+
+$font-family-mono: "Inconsolata", monospace;
+
+@mixin font($font-family) {
+
+    select {
+        font-family: $font-family;
+    }
+}
+
+body.sans {
+    @include font(
+        $font-family-sans
+    )
+}
+
+body.serif {
+    @include font(
+        $font-family-serif
+    )
+}
+
+body.mono {
+    @include font(
+        $font-family-mono
+    )
+}
+$red: #ff5252;
+
+$black: #000;
+$cecece: #cecece;
+
+$background-color-light: #fff;
+$select-light: #fff;
+$text-color-light: #2d2d2d;
+$input-color-light: #f4f4f4;
+$purple-light: #a445ed;
+$line-light: #e9e9e9;
+$gray-light: #757575;
+$li-style-light: #8f19e8;
+$option-shadow-light: rgba(0, 0, 0, 0.102);
+$toggle-light: #757575;
+
+$background-color-dark: #050505;
+$select-dark: #1f1f1f;
+$text-color-dark: #ffffff;
+$input-color-dark: #1f1f1f;
+$purple-dark: #a445ed;
+$line-dark: #3a3a3a;
+$gray-dark: #757575;
+$li-style-dark: #8f19e8;
+$option-shadow-dark: #a445ed;
+$toggle-dark: #a445ed;
+
+@mixin theme($background-color, $select, $text-color, $input-color, $purple, $line, $gray, $li-style, $option-shadow, $toggle) {
+    
+    background: $background-color;
+    color: $text-color;
+    transition: background-color 0.3s, color 0.3s;
+    height: 100vh;
+
+    .header__nav-theme {
+        border-left: 1px solid #e9e9e9;
+    }
+
+    .select {
+        color: $text-color;
+    }
+
+    .options {
+        background-color: $background-color;
+        box-shadow: 0 5px 30px 0 $option-shadow;
+    }
+
+    .toggle-switch {
+        background: $toggle;
+    }
+
+    .moon {
+        color: $toggle;
+    }
+
+    input {
+        background: $input-color;
+        color: $text-color;
+    }
+  
+    .about__header-transcription,
+    .synonym-link {
+        color: $purple;
+    }
+
+    .about__part-of-speech_meaning,
+    .about__part-of-speech_synonyms,
+    .about__part-of-speech_example,
+    .about__source p,
+    .no-found__description {
+        color: $gray;
+    }
+
+    li, .about__source a {
+        color: $text-color;
+    }
+
+    li::before {
+        background-color: $li-style;
+    }
+
+    .about__source {
+        border-top: 1px solid $line;
+    }
+
+   .line div {
+        background: $line;
+   }
+}
+
+:root {
+    @include theme(
+        $background-color-light,
+        $select-light,
+        $text-color-light,
+        $input-color-light,
+        $purple-light,
+        $line-light,
+        $gray-light,
+        $li-style-light,
+        $option-shadow-light,
+        $toggle-light
+    );
+}
+
+body.dark-theme {
+    @include theme(
+        $background-color-dark,
+        $select-dark,
+        $text-color-dark,
+        $input-color-dark,
+        $purple-dark,
+        $line-dark,
+        $gray-dark,
+        $li-style-dark,
+        $option-shadow-dark,
+        $toggle-dark
+    );
+}

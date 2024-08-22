@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Inter:wght@100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles/styles.css">
+  <title>Frontend Mentor | Dictionary web app</title>
+</head>
+<body class="sans">
+
+  <header class="header container">
+    <a href="#">
+      <img src="./assets/images/logo.svg" alt="dictionary">
+    </a>
+    
+    <nav class="header__nav">
+      <div class="select-container">
+        <div class="select">Sans Serif</div>
+        <div class="options">
+          <div class="option sans-option">Sans Serif</div>
+          <div class="option serif-option">Serif</div>
+          <div class="option mono-option">Mono</div>
+        </div>
+      </div>
+
+      <div class="header__nav-theme">
+          <div class="toggle-switch">
+            <input type="checkbox" id="toggle" class="toggle-input">
+            <label for="toggle" class="toggle-label">
+            </label>
+          </div>
+          <ion-icon name="moon-outline" class="moon"></ion-icon>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <section class="search">
+      <input type="text" placeholder="Search for any word…" id="search-input">
+      <button id="search-btn">
+        <img src="./assets/images/icon-search.svg" alt="search">
+      </button>
+      <p class="error-text">Whoops, can’t be empty…</p>
+    </section>
+    
+    <section class="about">
+    </section>
+
+  </main>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
